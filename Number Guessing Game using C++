@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+  cout<<"~~~welcome to the number guessing game~~~"<<endl;
+   int guessingnumber;
+   cout<<"enter the guessing number"<<endl;
+   cin>>guessingnumber;
+   bool guessed=true;
+   int guessednumber;
+   do{
+       cout<<"enter the guessed number"<<endl;
+       cin>>guessednumber;
+       if(guessingnumber==guessednumber){
+           cout<<"congratulations you guessed the correct number"<<endl;
+           guessed=true;
+       }
+       else if(guessingnumber>guessednumber){
+           cout<<"the number you guessed is less than guessing number"<<endl;
+           guessed=false;
+       }
+       else{
+           cout<<"the number you guessed is higher than the guessing number"<<endl;
+           guessed=false;
+       }
+   }
+   while(guessed==false);
+
+    return 0;
+    
+}
